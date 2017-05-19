@@ -13,8 +13,8 @@ var burger = {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
+  update: function(cols, objColVals, condition, cb) {
+    orm.update("burgers", cols, objColVals, condition, function(res) {
       cb(res);
     });
   },
@@ -25,5 +25,5 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (burgers_controller.js).
 module.exports = burger;
